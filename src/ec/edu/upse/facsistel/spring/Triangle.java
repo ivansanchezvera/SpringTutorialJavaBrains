@@ -1,41 +1,34 @@
 package ec.edu.upse.facsistel.spring;
 
+import java.util.List;
+
 public class Triangle {
 
-	private Point pointA;
-	private Point pointB;
-	private Point pointC;
+	private List<Point> points;
 	
-	public Point getPointA() {
-		return pointA;
+	
+
+	public List<Point> getPoints() {
+		return points;
 	}
 
-	public void setPointA(Point pointA) {
-		this.pointA = pointA;
+
+
+	public void setPoints(List<Point> points) {
+		this.points = points;
 	}
 
-	public Point getPointB() {
-		return pointB;
-	}
 
-	public void setPointB(Point pointB) {
-		this.pointB = pointB;
-	}
-
-	public Point getPointC() {
-		return pointC;
-	}
-
-	public void setPointC(Point pointC) {
-		this.pointC = pointC;
-	}
 
 	public void draw()
 	{
 		System.out.println("Triangle Drawn");
-		System.out.println("Point A: " + pointA);
-		System.out.println("Point B: " + pointB);
-		System.out.println("Point C: " + pointC);
+		
+		for(Point p: points)
+		{
+			System.out.println("Point: " + p);
+			
+		}
 	}
 
 
