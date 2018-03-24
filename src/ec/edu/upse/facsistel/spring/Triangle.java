@@ -1,15 +1,6 @@
 package ec.edu.upse.facsistel.spring;
 
-import java.util.List;
-
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-
-public class Triangle implements InitializingBean, DisposableBean{
+public class Triangle {
 
 	private Point pointA;
 	private Point pointB;
@@ -48,14 +39,14 @@ public class Triangle implements InitializingBean, DisposableBean{
 		
 	}
 
-	@Override
-	public void afterPropertiesSet() throws Exception {
-		System.out.println("Initilizing beans init method call for triangle ");		
+	public void myInit()
+	{
+		System.out.println("My initialization");
 	}
-
-	@Override
-	public void destroy() throws Exception {
-		System.out.println("Destroyed Bean");
+	
+	public void cleanUp()
+	{
+		System.out.println("Cleaning up. Bye bye.");
 	}
 
 }
