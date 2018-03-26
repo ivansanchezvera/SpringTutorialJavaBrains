@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans default-init-method="myInit" default-destroy-method="cleanUp">
-	<bean id="parentTriangle" class="ec.edu.upse.facsistel.spring.Triangle" abstract="true" >
+	<bean id="parentTriangle" class="ec.edu.upse.facsistel.spring.Triangle" abstract="true">
 		<property name="pointA" ref="pointA" />
 	</bean>
 
@@ -27,4 +27,6 @@
 		<property name="y" value="0" />		
 	</bean>
 	<alias name="triangle" alias="triangle-alias"/>
+	
+	<bean class="ec.edu.upse.facsistel.spring.DisplayNameBeanPostProcessor" />
 </beans>
