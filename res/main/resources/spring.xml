@@ -33,4 +33,5 @@
 	</bean>
 	
 	<bean class="ec.edu.upse.facsistel.spring.DisplayNameBeanPostProcessor" />
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
 </beans>
