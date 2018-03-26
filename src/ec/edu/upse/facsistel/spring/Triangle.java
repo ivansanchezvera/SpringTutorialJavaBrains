@@ -1,6 +1,6 @@
 package ec.edu.upse.facsistel.spring;
 
-public class Triangle {
+public class Triangle implements Shape {
 
 	private Point pointA;
 	private Point pointB;
@@ -30,9 +30,10 @@ public class Triangle {
 		this.pointC = pointC;
 	}
 
+	@Override
 	public void draw()
 	{
-		System.out.println("Triangle Drawn");
+		System.out.println("Drawing a Triangle");
 		System.out.println("Point A: " + pointA);
 		System.out.println("Point B: " + pointB);
 		System.out.println("Point C: " + pointC);

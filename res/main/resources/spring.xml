@@ -28,5 +28,9 @@
 	</bean>
 	<alias name="triangle" alias="triangle-alias"/>
 	
+	<bean id="circle" class="ec.edu.upse.facsistel.spring.Circle"  >
+		<property name="center" ref="pointA" />
+	</bean>
+	
 	<bean class="ec.edu.upse.facsistel.spring.DisplayNameBeanPostProcessor" />
 </beans>
