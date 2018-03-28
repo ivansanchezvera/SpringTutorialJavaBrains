@@ -37,7 +37,15 @@
 	<bean id="circle" class="ec.edu.upse.facsistel.spring.Circle"  >
 		
 	</bean>
-
+		
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" >
+		<property name="basenames">
+			<list>
+				<value>MyMessages</value>
+			</list>
+		</property>
+	</bean>
+	<context:component-scan base-package="ec.edu.upse.facsistel.spring" />
 	<context:annotation-config/>
 	
 </beans>
